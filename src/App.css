@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+.agreement-container {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.agreement-box {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 480px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.school-logo {
+    display: block;
+    margin: 0 auto;
+    width: 72px;
+    height: 72px;
+}
+
+.school-info {
+    background-color: #1D4ED8;
+    color: white;
+    font-size: 10px;
+    padding: 6px;
+    margin-top: 6px;
+    text-align: center;
+}
+
+.agreement-text {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.agreement-list {
+    font-size: 10px;
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.agreement-list li {
+    margin-bottom: 6px;
+}
+
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.signature-box input {
+    margin-top: 4px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    width: 150px;
+}
+
+.download-btn {
+    display: block;
+    margin: 30px auto 0;
+    background-color: #1D4ED8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* styles.css ya index.css me daalo */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
