@@ -21,7 +21,7 @@ export default function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/teacher" element={<TeacherGallery />} />
           <Route path="/student" element={<StudentGallary />} />
-          <Route path="/teachers" element={<TeacherProfile />} />
+          <Route path="/teachers/:index" element={<TeacherProfile />} />
           <Route path="/allnews" element={<Allnews />} />
           <Route path="*" element={<NoPageFound />} />
         </Routes>

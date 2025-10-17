@@ -10,7 +10,7 @@ export default function Teacher() {
   return (
     <div>
       <section
-        className={`relative max-w-7xl mx-auto px-4 py-5 cursor-pointer ${
+        className={`relative max-w-full mx-auto px-4 py-5 cursor-pointer ${
           isOpen ? bgBlack : bgWhite
         }`}
       >
@@ -25,7 +25,7 @@ export default function Teacher() {
         <div className={`flex flex-wrap justify-center gap-8 `}>
           {teacher.map((teachers, index) => (
             <div key={index} className={`text-center max-w-xs`}>
-              <Link to={`/teachers`}>
+              <Link to={`/teachers/${index}`}>
                 <img
                   className={`rounded-full transition-all duration-300 hover:scale-105 object-cover w-24 h-24 mx-auto border-4 border-blue-500 mb-2`}
                   src={teachers.image}

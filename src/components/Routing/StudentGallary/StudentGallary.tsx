@@ -11,7 +11,7 @@ const StudentGallary = () => {
   return (
     <div className={`${isOpen ? bgBlack : bgWhite}`}>
       <Navbar />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[70px] pb-12">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 pt-[70px] pb-12">
         <div className="text-center max-w-2xl mx-auto mb-6">
           <h2
             className={`font-bold ${

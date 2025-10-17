@@ -20,7 +20,7 @@ export default function Students() {
 
   return (
     <div className={`relative ${isOpen ? bgBlack : bgWhite}`}>
-      <section className="max-w-7xl mx-auto px-4 py-10">
+      <section className="max-w-full mx-auto px-4 py-10">
         <p
           className={`flex justify-center items-center text-[22px] md:text-[32px] tracking-widest font-extrabold py-5 ${
             isOpen ? textWhite : textBlack

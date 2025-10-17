@@ -28,7 +28,7 @@ const Faq = () => {
   return (
     <div className={`${"bg-[#e9e9dd]"}`}>
       <Navbar />
-      <main className={`${"max-w-7xl mx-auto "} ${isOpen ? bgBlack : bgWhite}`}>
+      <main className={`${"max-w-full mx-auto "} ${isOpen ? bgBlack : bgWhite}`}>
         {/* Intro */}
         <section
           className={`${"flex flex-col md:flex-row items-center justify-between px-10 pt-16"}`}
