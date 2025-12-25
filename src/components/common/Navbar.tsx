@@ -131,7 +131,7 @@ export default function Navbar() {
               placeholder="Search here"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className={`sm:hidden px-4 py-1 rounded-2xl border ${
+              className={`sm:hidden placeholder:text-black px-4 py-1 rounded-2xl border ${
                 isOpen ? textWhite : textBlack
               }`}
             />
