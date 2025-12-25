@@ -4,6 +4,7 @@ import { slides } from "./Array/AllArray";
 import { bgBlack, bgWhite } from "./GlobalTextColor/bg";
 import { textWhite, textBlack } from "./GlobalTextColor/text";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { HERO } from "./GlobalTextColor/string";
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
@@ -58,7 +59,7 @@ export default function HeroSlider() {
               }`}
             >
               <p className="text-xs uppercase tracking-[0.6em] text-[#F38B2E]">
-                Featured
+                {HERO.BADGE}
               </p>
 
               <h1
@@ -79,7 +80,7 @@ export default function HeroSlider() {
 
               <div className="flex flex-wrap gap-3">
                 <button className="rounded-full bg-gradient-to-r from-[#F38B2E] to-[#FCEA2B] px-6 py-3 text-xs font-bold uppercase tracking-[0.4em] text-slate-900 shadow-lg transition hover:scale-[1.03]">
-                  Admissions Open
+                  {HERO.BTN_ADMISSION}
                 </button>
 
                 <button
@@ -90,7 +91,7 @@ export default function HeroSlider() {
                       : "border-slate-400 text-slate-700 hover:border-slate-600"
                   }`}
                 >
-                  Book a Tour
+                  {HERO.BTN_TOUR}
                 </button>
               </div>
             </div>

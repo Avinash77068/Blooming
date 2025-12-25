@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 
 import { bgBlack, BgFooterLight } from "../GlobalTextColor/bg";
 import { textBlack, textWhite, textLink } from "../GlobalTextColor/text";
-import { FOOTER } from "../GlobalTextColor/string/FooterString";
+import { FOOTER } from "../GlobalTextColor/string";
 
 export default function Footer() {
   const isOpen = useSelector((state: any) => state.user.isOpen);

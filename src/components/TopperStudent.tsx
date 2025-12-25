@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { bgBlack, bgWhite } from "./GlobalTextColor/bg";
 import { textBlack, textWhite } from "./GlobalTextColor/text";
 import { students } from "./Array/AllArray";
+import { STUDENTS } from "./GlobalTextColor/string";
 
 export default function Students() {
   const isOpen = useSelector((state: any) => state.user.isOpen);
@@ -26,7 +27,7 @@ export default function Students() {
             isOpen ? textWhite : textBlack
           }`}
         >
-          Student List
+          {STUDENTS.SECTION_TITLE}
         </p>
 
         {/*  Wrapper: Scroll + Info Box */}

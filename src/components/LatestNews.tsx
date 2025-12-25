@@ -3,6 +3,7 @@ import { newsItems } from "./Array/AllArray";
 import { bgBlack, bgWhite } from "./GlobalTextColor/bg";
 import { textBlack, textWhite } from "./GlobalTextColor/text";
 import { Link } from "react-router-dom";
+import { LATEST_NEWS } from "./GlobalTextColor/string";
 
 export default function LatestNews() {
   const isOpen = useSelector((state: any) => state.user.isOpen);
@@ -18,14 +19,14 @@ export default function LatestNews() {
             isOpen ? textWhite : textBlack
           }`}
         >
-          LATEST NEWS
+          {LATEST_NEWS.TITLE}
         </h3>
         <Link to={"/allnews"}
           className={`text-xs font-semibold border border-gray-300 rounded-full px-4 py-1.5 hover:bg-gray-100 transition ${
             isOpen ? textWhite : textBlack
           }`}
         >
-          All News
+          {LATEST_NEWS.ALL}
         </Link>
       </div>
       <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4`}>
@@ -39,11 +40,11 @@ export default function LatestNews() {
             <div className={`relative`}>
               <img
                 src={item.img}
-                alt={`News thumbnail`}
+                alt={LATEST_NEWS.IMAGE_ALT}
                 className={`w-full h-40 object-cover`}
               />
               <button
-                aria-label={`Bookmark news item`}
+                aria-label={LATEST_NEWS.BOOKMARK_ARIA}
                 className={`absolute top-2 right-2 ${
                   isOpen ? textWhite : textBlack
                 } text-lg`}

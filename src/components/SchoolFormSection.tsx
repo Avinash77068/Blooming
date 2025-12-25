@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import { bgBlack, bgWhite } from "./GlobalTextColor/bg";
 import { textBlack, textWhite } from "./GlobalTextColor/text";
+import { SCHOOL_ENV } from "./GlobalTextColor/string";
+import { IMAGE } from "./GlobalTextColor/images";
 
 // components/SchoolFormSection.jsx
 export default function SchoolFormSection() {
@@ -18,29 +20,25 @@ export default function SchoolFormSection() {
             isOpen ? textWhite : textBlack
           } mb-2`}
         >
-          OUR SCHOOL ENVIRONMENT IS BUILT TO NURTURE STUDENT GROWTH
+          {SCHOOL_ENV.TITLE}
         </h3>
         <p
           className={`text-xs sm:text-sm md:text-sm ${
             isOpen ? textWhite : textBlack
           } leading-relaxed mb-4`}
         >
-          At our institution, we focus on creating a safe, engaging, and
-          inclusive learning environment where every student feels inspired to
-          achieve their full potential.
+          {SCHOOL_ENV.DESC_1}
           <br />
           <br />
-          With modern classrooms, experienced faculty, and a well-rounded
-          curriculum, we aim to develop confident, curious, and compassionate
-          learners who are prepared for the challenges of tomorrow.
+          {SCHOOL_ENV.DESC_2}
         </p>
       </div>
 
       {/* Image Content */}
       <div className=" sm:w-[400px] shadow-md overflow-hidden rounded-md">
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkks6iBWTWO1eehnY3SYc52ky1HQjJZ7Q9XmdnvL0qbATgkf9xUWYMT6vidAk9igYgrQI&usqp=CAU"
-          alt="School Students"
+          src={IMAGE.SCHOOLFORM}
+          alt={SCHOOL_ENV.IMAGE_ALT}
           className="w-full h-full object-cover"
         />
       </div>

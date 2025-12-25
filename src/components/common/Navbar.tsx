@@ -13,7 +13,7 @@ import { navItems } from "../Array/AllArray";
 import { Link } from "react-router-dom";
 import { dropdownOptions } from "../Array/AllArray";
 import { toast } from "react-toastify";
-import { NAVBAR } from "../GlobalTextColor/string/NavString";
+import { NAVBAR } from "../GlobalTextColor/string";
 
 export default function Navbar() {
   const menuOpen = useSelector((state: RootState) => state.navbar.navOpen);

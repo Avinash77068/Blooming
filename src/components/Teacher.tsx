@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { bgBlack, bgWhite } from "./GlobalTextColor/bg";
 import { teacher } from "./Array/AllArray";
+import { FACULTY } from "./GlobalTextColor/string";
 
 
 export default function Teacher() {
@@ -14,9 +15,9 @@ export default function Teacher() {
       >
         <div className="flex flex-col gap-3 text-center">
           <p className="text-xs uppercase tracking-[0.6em] text-[#F38B2E]">
-            Educators
+            {FACULTY.BADGE}
           </p>
-          <h2 className="text-3xl font-black">Our Faculty</h2>
+          <h2 className="text-3xl font-black">{FACULTY.TITLE}</h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {teacher.map((person) => (
@@ -41,7 +42,7 @@ export default function Teacher() {
                 {person.testimonial}
               </p>
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#F38B2E]">
-                Expertise
+                {FACULTY.EXPERTISE_LABEL}
               </p>
               <p className="text-sm text-slate-700 dark:text-slate-200">
                 {person.expertise}
