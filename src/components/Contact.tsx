@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 export default function Contact() {

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { academicPrograms } from './Array/AllArray';
 import { useSelector } from 'react-redux';
 import { bgBlack, bgWhite } from './GlobalTextColor/bg';
