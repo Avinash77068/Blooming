@@ -20,6 +20,8 @@ export default function Navbar() {
   const menuOpen = useSelector((state: RootState) => state.navbar.navOpen);
   const isOpen = useSelector((state: any) => state.user.isOpen);
   const dispatch = useDispatch();
+  const menuTextColor = isOpen ? textWhite : textBlack;
+  const dropdownBg = isOpen ? bgBlack : BgOther;
 
   const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<number | null>(
@@ -32,7 +34,9 @@ export default function Navbar() {
 
   // Check if menu has dropdown
   const hasDropdown = (index: number) =>
-    dropdownOptions[index]?.some((opt) => opt.path && opt.path.length > 0 || opt.path === "/");
+    dropdownOptions[index]?.some(
+      (opt) => (opt.path && opt.path.length > 0) || opt.path === "/"
+    );
 
   return (
     <nav
@@ -79,12 +83,13 @@ export default function Navbar() {
                 <ul
                   className={`absolute left-0 mt-1 ${
                     dropdownOpen === i ? "flex" : "hidden"
-                  } flex-col w-40 ${
-                    isOpen ? bgBlack : BgOther
-                  } shadow-md rounded-md ${textBlueType} text-sm z-50`}
+                  } flex-col w-40 ${dropdownBg} shadow-md rounded-md ${textBlueType} text-sm z-50`}
                 >
                   {dropdownOptions[i]
-                    .filter((opt) => opt.path && opt.path.length > 0 || opt.path === "/")
+                    .filter(
+                      (opt) =>
+                        (opt.path && opt.path.length > 0) || opt.path === "/"
+                    )
                     .map((opt, index) => (
                       <Link key={index} to={opt.path}>
                         <li className="px-4 py-2 -mt-1 hover:bg-blue-100 cursor-pointer">
@@ -155,11 +160,11 @@ export default function Navbar() {
           onClick={() => dispatch(setMenuOpen())}
         >
           <div
-            className="lg:hidden w-[15rem] mx-auto border-t border-gray-300"
+            className="lg:hidden  mx-auto border-t border-gray-300"
             onClick={(e) => e.stopPropagation()}
           >
             <div
-              className={`flex flex-col h-screen py-3 px-4 ${
+              className={`flex flex-col w-[15rem] h-screen py-3 px-4 ${
                 isOpen ? bgBlack : BgOther
               }`}
             >
@@ -173,7 +178,7 @@ export default function Navbar() {
                           mobileDropdownOpen === i ? null : i
                         )
                       }
-                      className="flex justify-between items-center w-full hover:underline"
+                      className={`flex ${menuTextColor} justify-between items-center w-full hover:underline`}
                     >
                       {item}
                       {hasDropdown(i) && (
@@ -193,7 +198,9 @@ export default function Navbar() {
                             to={opt.path}
                             onClick={() => dispatch(setMenuOpen())}
                           >
-                            <li className="px-2 py-1 rounded-md hover:bg-blue-100">
+                            <li
+                              className={`px-2 py-1 rounded-md hover:bg-blue-100 ${menuTextColor}`}
+                            >
                               {opt.name}
                             </li>
                           </Link>
