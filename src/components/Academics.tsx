@@ -12,7 +12,7 @@ export default function Academics() {
           Programs
         </p>
         <h2 className="text-3xl font-black">Academics</h2>
-        <p className="text-sm text-slate-600 dark:text-slate-300">
+        <p className="text-sm text-slate-700 dark:text-slate-600">
           Rigorous curriculum, vibrant co-curriculars, and personalized learning
           pathways.
         </p>

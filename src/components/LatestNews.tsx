@@ -8,7 +8,7 @@ export default function LatestNews() {
   const isOpen = useSelector((state: any) => state.user.isOpen);
   return (
     <section
-      className={`px-4 sm:px-6 md:px-10 lg:px-12 pt-16 max-w-full ${
+      className={`px-4 sm:px-6 md:px-10 lg:px-12 pt-5 sm:pt-16 max-w-full ${
         isOpen ? bgBlack : bgWhite
       } `}
     >
@@ -57,7 +57,7 @@ export default function LatestNews() {
                   isOpen ? textWhite : textBlack
                 }`}
               >
-                High quality English teachers from Great Britain will teach...
+                {item.title}
               </h4>
               <div
                 className={`flex justify-between text-[10px] ${

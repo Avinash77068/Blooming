@@ -33,12 +33,12 @@ export default function HeroSlider() {
       }`}
     >
       {/* FIXED HEIGHT (NO FLICKER / NO JUMP) */}
-      <div className="relative w-full h-[240px] sm:h-[380px] md:h-[550px] overflow-hidden">
+      <div className="relative w-full h-[340px] sm:h-[380px] md:h-[550px] overflow-hidden">
         <img
           key={current}
           src={slides[current].url}
           alt="School slide"
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out"
+          className="absolute sm:inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out"
           draggable="false"
           loading="eager"
         />
@@ -48,7 +48,7 @@ export default function HeroSlider() {
 
         {/* CONTENT */}
         <section id="hero" className="relative z-10 h-full">
-          <div className="max-w-6xl mx-auto h-full grid items-center px-4 md:grid-cols-2 lg:px-0">
+          <div className="max-w-6xl hidden  mx-auto h-full sm:grid items-center px-4 md:grid-cols-2 lg:px-0">
             <div
               className={`space-y-6 rounded-[32px] border border-white/20 p-8 shadow-[0_35px_120px_rgba(0,0,0,0.6)]
               ${
@@ -95,19 +95,23 @@ export default function HeroSlider() {
               </div>
             </div>
           </div>
+          <div className="flex sm:hidden">
+            <h1>{slides[current].title}</h1>
+            <p>{slides[current].desc}</p>
+          </div>
         </section>
 
         {/* ARROWS */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 text-white/80 hover:text-white transition"
+          className="absolute left-4 top-1/2 cursor-pointer z-20 -translate-y-1/2 text-white/80 hover:text-white transition"
         >
           <FaArrowAltCircleLeft size={36} />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 text-white/80 hover:text-white transition"
+          className="absolute right-4 cursor-pointer top-1/2 z-20 -translate-y-1/2 text-white/80 hover:text-white transition"
         >
           <FaArrowAltCircleRight size={36} />
         </button>
@@ -120,9 +124,7 @@ export default function HeroSlider() {
             key={index}
             onClick={() => setCurrent(index)}
             className={`h-2.5 w-2.5 rounded-full transition-all ${
-              current === index
-                ? "bg-[#F38B2E] scale-110"
-                : "bg-white/60"
+              current === index ? "bg-[#F38B2E] scale-110" : "bg-white/60"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

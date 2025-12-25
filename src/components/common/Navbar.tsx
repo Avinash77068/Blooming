@@ -13,6 +13,7 @@ import { navItems } from "../Array/AllArray";
 import { Link } from "react-router-dom";
 import { dropdownOptions } from "../Array/AllArray";
 import { toast } from "react-toastify";
+import { NAVBAR } from "../GlobalTextColor/string/NavString";
 
 export default function Navbar() {
   const menuOpen = useSelector((state: RootState) => state.navbar.navOpen);
@@ -20,8 +21,8 @@ export default function Navbar() {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<number | null>(
     null
   );
-  const notify = () => toast.warn("Login is not Active Now!");
-  const notifys = () => toast.warn("Login is not Active Now!");
+  const notify = () => toast.warn(NAVBAR.TOAST_LOGIN_INACTIVE);
+  const notifys = () => toast.warn(NAVBAR.TOAST_LOGIN_INACTIVE);
   const [input, setInput] = useState("");
   const isOpen = useSelector((state: any) => state.user.isOpen);
   const dispatch = useDispatch();
@@ -94,7 +95,7 @@ export default function Navbar() {
           <div className="hidden md:flex lg:flex items-center space-x-3 lg:mt-0">
             <input
               type="text"
-              placeholder=" Search here"
+              placeholder={NAVBAR.SEARCH_PLACEHOLDER}
               className={`py-1 border px-3 rounded-2xl ${
                 isOpen
                   ? `border-white ${textWhite} placeholder:text-white`
@@ -123,7 +124,7 @@ export default function Navbar() {
               className={`text-xl ${textBlueType} px-2 transition-transform duration-300`}
             >
               <span
-                className={`inline-block transform transition-transform duration-300 ${
+                className={`inline-block cursor-pointer transform transition-transform duration-300 ${
                   isOpen ? "rotate-360" : "rotate-0"
                 }`}
               >
@@ -212,13 +213,13 @@ export default function Navbar() {
                   onClick={notifys}
                   className={`${textWhite} ${BgBlue} rounded-2xl px-4 py-1`}
                 >
-                  SignUp
+                  {NAVBAR.SIGNUP}
                 </button>
                 <button
                   className={`${textWhite} ${BgBlue} text-[15px] rounded-2xl px-4 py-2`}
                   onClick={notify}
                 >
-                  Log In
+                  {NAVBAR.LOGIN}
                 </button>
               </div>
             </div>

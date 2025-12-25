@@ -1,6 +1,6 @@
 import image1 from "../../assets/image/University.jfif";
 import image2 from "../../assets/image/school.jpg";
-import Blooming from "../../assets/logo/BloomingChildrenAcademy.jpg";
+import Blooming from "../../assets/logo/bloooming.jpg";
 import image3 from "../../assets/./image/schoolBoys.jfif";
 import newsImage1 from "../../assets/image/Boys.jpg";
 import newsImage2 from "../../assets/image/Library.jpg";
@@ -16,7 +16,6 @@ import dilshad from "../../assets/Teacher/dilshad.jpeg";
 import aviansh from "../../assets/Student/avinash.png";
 import shailesh from "../../assets/Student/shailesh.jfif";
 import suraj from "../../assets/Student/suraj.jfif";
-
 const time = () => {
   const now = new Date();
   return now.toLocaleDateString("en-US", {
@@ -69,21 +68,21 @@ export const slides = [
     id: 1,
     url: Blooming,
     title: "Welcome to Bright Future College",
-    desc:"",
+    desc: "",
     text: "Empowering students to achieve academic excellence and personal growth in a vibrant learning environment.",
   },
   {
     id: 2,
     url: image2,
     title: "Explore Our Career-Focused Programs",
-    desc:"",
+    desc: "",
     text: "From technology to humanities, discover programs designed to prepare you for real-world success.",
   },
   {
     id: 3,
     url: image3,
     title: "Join a Community of Innovators",
-    desc:"",
+    desc: "",
     text: "Collaborate, create, and connect with faculty and peers who are passionate about shaping the future.",
   },
 ];
@@ -92,21 +91,25 @@ export const newsItems = [
     img: image1,
     time: "3 hours ago",
     comments: time(),
+    title:"High quality English teachers from Great Britain will teach...",
   },
   {
     img: newsImage1,
     time: "2 hours ago",
     comments: time(),
+    title:"High quality English teachers from Great Britain will teach...",
   },
   {
     img: newsImage2,
     time: "3 hours ago",
     comments: time(),
+    title:"High quality English teachers from Great Britain will teach...",
   },
   {
     img: newsImage3,
     time: "3 hours ago",
     comments: time(),
+    title:"High quality English teachers from Great Britain will teach...",
   },
 ];
 export const navItems = [

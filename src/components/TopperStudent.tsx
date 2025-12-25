@@ -38,7 +38,7 @@ export default function Students() {
                 <div
                   key={index}
                   ref={(el: any) => (imageRefs.current[index] = el)}
-                  className="flex flex-col items-center min-w-[150px] sm:min-w-[200px] text-center"
+                  className="flex flex-col cursor-pointer items-center min-w-[150px] sm:min-w-[200px] text-center"
                   onClick={() => handleImageClick(index)}
                 >
                   <img
