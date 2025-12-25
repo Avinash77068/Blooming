@@ -1,8 +1,7 @@
 import { useSelector } from "react-redux";
 import { bgBlack, bgWhite } from "./GlobalTextColor/bg";
-import { textBlack, textWhite } from "./GlobalTextColor/text";
 import { teacher } from "./Array/AllArray";
-import { Link } from "react-router-dom";
+
 
 export default function Teacher() {
   const isOpen = useSelector((state: any) => state.user.isOpen);
@@ -10,55 +9,44 @@ export default function Teacher() {
   return (
     <div>
       <section
-        className={`relative max-w-full mx-auto px-4 py-5 cursor-pointer ${
-          isOpen ? bgBlack : bgWhite
-        }`}
+        id="faculty"
+        className={` ${isOpen ? bgBlack : bgWhite} mx-auto  px-4`}
       >
-        <p
-          className={`flex justify-center  items-center text-[22px] md:text-[32px] tracking-widest font-extrabold py-5 ${
-            isOpen ? textWhite : textBlack
-          }`}
-        >
-          Teacher List
-        </p>
-
-        <div className={`flex flex-wrap justify-center gap-8 `}>
-          {teacher.map((teachers, index) => (
-            <div key={index} className={`text-center max-w-xs`}>
-              <Link to={`/teachers/${index}`}>
+        <div className="flex flex-col gap-3 text-center">
+          <p className="text-xs uppercase tracking-[0.6em] text-[#F38B2E]">
+            Educators
+          </p>
+          <h2 className="text-3xl font-black">Our Faculty</h2>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {teacher.map((person) => (
+            <article
+              key={person.name}
+              className="flex flex-col gap-3 rounded-[28px] border border-slate-200/80 bg-white/80 p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-white/10 dark:bg-slate-900/60"
+            >
+              <div className="flex items-center gap-3">
                 <img
-                  className={`rounded-full transition-all duration-300 hover:scale-105 object-cover w-24 h-24 mx-auto border-4 border-blue-500 mb-2`}
-                  src={teachers.image}
-                  alt={teachers.name}
+                  src={person.image}
+                  alt={person.name}
+                  className="h-16 w-16 rounded-full object-cover border-2 border-[#2a9d8f]"
                 />
-              </Link>
-
-              <div className={`flex justify-center mb-1`}>
-                <svg
-                  className={`h-6 w-6 text-yellow-400`}
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7 17h4v-6H5V5h6V3H5a2 2 0 0 0-2 2v8a4 4 0 0 0 4 4zm10 0h4v-6h-6V5h6V3h-6a2 2 0 0 0-2 2v8a4 4 0 0 0 4 4z" />
-                </svg>
+                <div>
+                  <h3 className="text-lg font-bold">{person.name}</h3>
+                  <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
+                    {person.course}
+                  </p>
+                </div>
               </div>
-
-              <h3
-                className={`font-semibold ${
-                  isOpen ? textWhite : "text-gray-700"
-                } text-base`}
-              >
-                {teachers.name}
-              </h3>
-              <p className={`text-gray-500 text-xs mb-2`}>{teachers.course}</p>
-              <p
-                className={`${
-                  isOpen ? textWhite : "text-gray-600"
-                } text-sm px-2`}
-              >
-                {teachers.testimonial}
+              <p className="text-sm text-slate-600 dark:text-slate-200">
+                {person.testimonial}
               </p>
-            </div>
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#F38B2E]">
+                Expertise
+              </p>
+              <p className="text-sm text-slate-700 dark:text-slate-200">
+                {person.expertise}
+              </p>
+            </article>
           ))}
         </div>
       </section>

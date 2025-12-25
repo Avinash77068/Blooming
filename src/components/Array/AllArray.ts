@@ -13,7 +13,7 @@ import surendra from "../../assets/Teacher/Surendra.jpg";
 import sunil from "../../assets/Teacher/sunil.jpeg";
 import dilshad from "../../assets/Teacher/dilshad.jpeg";
 
-import aviansh from "../../assets/Student/avinash.jpeg";
+import aviansh from "../../assets/Student/avinash.png";
 import shailesh from "../../assets/Student/shailesh.jfif";
 import suraj from "../../assets/Student/suraj.jfif";
 
@@ -69,18 +69,21 @@ export const slides = [
     id: 1,
     url: Blooming,
     title: "Welcome to Bright Future College",
+    desc:"",
     text: "Empowering students to achieve academic excellence and personal growth in a vibrant learning environment.",
   },
   {
     id: 2,
     url: image2,
     title: "Explore Our Career-Focused Programs",
+    desc:"",
     text: "From technology to humanities, discover programs designed to prepare you for real-world success.",
   },
   {
     id: 3,
     url: image3,
     title: "Join a Community of Innovators",
+    desc:"",
     text: "Collaborate, create, and connect with faculty and peers who are passionate about shaping the future.",
   },
 ];
@@ -412,5 +415,23 @@ export const cardData = [
     title: "Starry Night",
     description: "A mesmerizing night sky filled with stars.",
     date: "October 20, 2023",
+  },
+];
+
+export const academicPrograms = [
+  {
+    title: "Early Years",
+    payload: "Play-based learning, phonics, expressive art & movement.",
+    badge: "Foundation",
+  },
+  {
+    title: "Middle School",
+    payload: "Inquiry-led Science, Math, Social Studies, and Hindi.",
+    badge: "Holistic",
+  },
+  {
+    title: "Senior Secondary",
+    payload: "CBSE / Cambridge pathways, focused labs & counselling.",
+    badge: "Future Ready",
   },
 ];
