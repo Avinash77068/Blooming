@@ -30,8 +30,8 @@ export const dropdownOptions: {
   [key: number]: { name: string; path: string }[];
 } = {
   0: [
-    { name: "Home", path: "/" },
-    { name: "Home Sub 2", path: "/home-sub2" },
+    { name: "Home", path: "/"},
+    // { name: "Home Sub 2", path: "/home-sub2" },
   ],
   1: [
     { name: "About Us", path: "/about-us" },
