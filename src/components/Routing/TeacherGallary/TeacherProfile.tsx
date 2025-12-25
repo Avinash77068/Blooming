@@ -2,13 +2,13 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { teacher } from "../../Array/AllArray";
 import { bgBlack, bgWhite } from "../../GlobalTextColor/bg";
-import Navbar from "../../common/Navbar";
 import { textBlack, textWhite } from "../../GlobalTextColor/text";
 import { Link } from "react-router-dom";
+import { RootState } from "../../store/Store";
 
 const TeacherProfile = () => {
   const { index } = useParams<{ index: string }>();
-  const isOpen = useSelector((state: any) => state.user.isOpen);
+  const isOpen = useSelector((state:RootState) => state.user.isOpen);
   const teacherData = teacher[Number(index)];
 
   if (!teacherData) {

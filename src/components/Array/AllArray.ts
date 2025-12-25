@@ -124,6 +124,7 @@ export const teacher = [
     testimonial:
       "With a deep passion for Chemistry, I strive to simplify complex concepts and make the subject enjoyable for my students.",
     image: surendra,
+    email:"surendra@example.com",
     expertise:
       "Expert in Inorganic and Organic Chemistry, with a focus on experimental techniques and reaction mechanisms.",
   },
@@ -133,6 +134,7 @@ export const teacher = [
     testimonial:
       "The study of English literature opens doors to a new world of critical thinking and creativity. I guide students to explore these realms.",
     image: Sangram,
+    email:"sangram@example.com",
     expertise:
       "Expert in English literature, specializing in classic and modern texts, literary analysis, and creative writing.",
   },
@@ -142,6 +144,7 @@ export const teacher = [
     testimonial:
       "Chemistry and Physics go hand-in-hand in the real world. I aim to bridge these two subjects for a deeper understanding of both.",
     image: Ramesh,
+    email:"ramesh@example.com",
     expertise:
       "Specializes in Physical Chemistry, Thermodynamics, Quantum Mechanics, and Classical Physics.",
   },
@@ -151,6 +154,7 @@ export const teacher = [
     testimonial:
       "Sanskrit is not just a language but a way to connect with ancient Indian knowledge. I aim to bring that knowledge to life for my students.",
     image: vibhayRaj,
+    email:"vibhayraj@example.com",
     expertise:
       "Fluent in classical Sanskrit, Vedic texts, and Sanskrit literature. Strong in the philosophical and grammatical aspects.",
   },
@@ -160,6 +164,7 @@ export const teacher = [
     testimonial:
       "The beauty of language lies in its ability to connect cultures and people. I teach both English and Hindi to make communication powerful.",
     image: girja,
+    email:"girja@example.com",
     expertise:
       "Specializes in literature, translation studies, and bilingual communication in both English and Hindi.",
   },
@@ -169,6 +174,7 @@ export const teacher = [
     testimonial:
       "I help students find the link between Art, Social Science, and language to develop a holistic perspective on various subjects.",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
+    email:"reema@example.com",
     expertise:
       "Expert in Hindi literature, Art history, and Social Science with a focus on societal structures and art movements.",
   },
@@ -187,6 +193,7 @@ export const teacher = [
     testimonial:
       "A solid understanding of grammar is crucial to mastering any language. I focus on perfecting language skills through strong grammar foundations.",
     image: dilshad,
+    email:"dilshad@example.com",
     expertise:
       "Specialized in advanced English grammar, syntax, and teaching English as a second language. Also proficient in Hindi grammar.",
   },
@@ -196,6 +203,7 @@ export const teacher = [
     testimonial:
       "Practical experience in the legal field is essential for every Math student. I help students bridge the gap between numerical and practice.",
     image: sunil,
+    email:"surendra@example.com",
     expertise:
       "Expert in legal theory, Constitutional law, and practical exposure through moot court and legal aid clinics.",
   },
