@@ -9,7 +9,7 @@ import Faq from "./components/Routing/InformationPage/Faq";
 
 // Gallery
 import TeacherGallery from "./components/Routing/TeacherGallary/TeacherGallary";
-import TeacherProfile from "./components/Routing/TeacherGallary/TeacherProfile";
+// import TeacherProfile from "./components/Routing/TeacherGallary/TeacherProfile";
 import StudentGallary from "./components/Routing/StudentGallary/StudentGallary";
 import FunctionPhotos from "./components/Routing/StaticPages/FunctionPhotos";
 import SchoolPhotos from "./components/Routing/StaticPages/SchoolPhotos";
@@ -42,7 +42,7 @@ export default function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/teacher" element={<TeacherGallery />} />
           <Route path="/student" element={<StudentGallary />} />
-          <Route path="/teachers/:index" element={<TeacherProfile />} />
+          {/* <Route path="/teachers/:index" element={<TeacherProfile />} />   */}
           <Route path="/allnews" element={<Allnews />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/home-sub2" element={<HomeSubTwo />} />
